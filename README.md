@@ -52,25 +52,28 @@ Built using **Python**, **Pandas**, **scikit-learn**, and **Streamlit** — and 
 ```bash
 git clone https://github.com/Mayan-kr/Movie-Recommendation-System.git
 cd Movie-Recommendation-System
+```
 
 ### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 ### 3. Run the app
 ```bash
 streamlit run app.py
+```
 
 ---
 
 ## 📦 Files Overview
-
+```bash
 Movie-Recommendation-System/
 ├── app.py               # Streamlit app
 ├── netflix_titles.csv   # Movie dataset
 ├── requirements.txt     # Required Python packages
 ├── README.md            # You are here 👋
-
+```
 ---
 
 ## 🗃️ Dataset
