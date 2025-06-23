@@ -3,8 +3,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 df=pd.read_csv('netflix_titles.csv')
-df = df[df['type'] == 'Movie'] 
-df=df.dropna(axis=0)
+df = df[df['type'] == 'Movie']
+df = df.dropna(subset=['title', 'description', 'listed_in'])
+df = df.reset_index(drop=True)
 
 df['combined_features'] = df['listed_in'] + ' ' + df['description']
 
@@ -54,4 +55,3 @@ def recommend_movie(title, df, similarity_matrix, top_n=5):
         'Recommendations': similar_movies
     }
     
-recommend_movie("Birth of the Dragon", df, similarity_matrix) 
